@@ -56,7 +56,7 @@ function roundResult(playerChoice, computerChoice) {
 
 
 function game() {
-  for (let i=1; i < 4; i++) {
+  for (let i=1; playerScore !== 5 && computerScore !== 5; i++) {
     console.log(`Round ${i}`);
 
       let computerChoice = getComputerChoice();
