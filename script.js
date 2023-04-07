@@ -1,20 +1,20 @@
-let computerChoice = getComputerChoice();
-let playerChoice = prompt("Please enter your choice").toUpperCase();
-let gameResult = roundResult(playerChoice, computerChoice)
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() *3) + 1
     let choice = "";
-
-    if (randomNumber === 1) {
-        choice = 'ROCK';
-    }
-    if (randomNumber === 2) {
-        choice = 'PAPER'
-    }
-    if (randomNumber === 3) {
-        choice = 'SCISSORS'
-    }
+    switch (randomNumber) {
+   case 1:
+     choice = 'ROCK';
+     break;
+  case 2:
+    choice = 'PAPER';
+     break;
+  case 3:
+    choice = 'SCISSORS';
+     break;
+}
 
     return (choice);
 };
@@ -24,21 +24,28 @@ function roundResult(playerChoice, computerChoice) {
         return 'its a draw!'
       }
       if (computerChoice === 'ROCK' && playerChoice === "PAPER") {
-        return 'you win!'
+        playerScore++;
+        return 'you win!';
+       
       }
       if (computerChoice === 'ROCK' && playerChoice === "SCISSORSS") {
+        computerScore++;
         return 'you lost!'
       }
       if (computerChoice === 'PAPER' && playerChoice === "SCISSORS") {
-        return 'you win!'
+        playerScore++;
+        return 'you win!';
       }
       if (computerChoice === 'PAPER' && playerChoice === "ROCK") {
+        computerScore++;
         return 'you lose!'
       }
       if (computerChoice === 'SCISSORS' && playerChoice === "ROCK") {
-        return 'you win!'
+        playerScore++;
+        return 'you win!';
       }
       if (computerChoice === 'SCISSORS' && playerChoice === "PAPER") {
+        computerScore++;
         return 'you lose!'
       }
       else {
@@ -46,12 +53,20 @@ function roundResult(playerChoice, computerChoice) {
       }
 };
 
-function game() {
 
+
+function game() {
+  for (let i=1; i < 4; i++) {
+    console.log(`Round ${i}`);
+
+      let computerChoice = getComputerChoice();
+      let playerChoice = prompt("Please enter your choice").toUpperCase();
+      let gameResult = roundResult(playerChoice, computerChoice)
+      console.log("Computer choice: " + computerChoice);
+      console.log ("Player choice: " + playerChoice);
+      console.log(gameResult);
+      console.log("Player score: " + playerScore + " | Computer score: " + computerScore);
+  }
 }
 
-console.log("Computer choice: " + computerChoice);
-console.log ("Player choice: " + playerChoice)
-console.log(gameResult)
-
-
+game()
