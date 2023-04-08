@@ -66,7 +66,21 @@ function game() {
       console.log ("Player choice: " + playerChoice);
       console.log(gameResult);
       console.log("Player score: " + playerScore + " | Computer score: " + computerScore);
+      
+  }
+ 
+
+}
+
+game();
+
+function gameResult() {
+  if (playerScore === 5) {
+    return 'You win this game';
+  }
+  if (computerScore === 5) {
+    return 'Computer win this game';
   }
 }
 
-game()
+console.log(gameResult());
