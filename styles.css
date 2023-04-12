@@ -1,7 +1,7 @@
 
 .game-container {
     margin: auto;
-    width: 40vw;
+    width: 45vw;
 }
 
 .score-container {
@@ -26,4 +26,32 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.button-container button {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+}
+
+.roundResult {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#computerChoice, #playerChoice {
+    height: 60px;
+}
+
+#roundResult {
+    height: 20px;
+    margin-bottom: 20px;
 }

@@ -76,17 +76,16 @@ function playRound() {
     // console.log(`Round ${i}`);
     let computerChoice = getComputerChoice();
     let thisRoundResult = getRoundResult(playerChoice, computerChoice);
-    console.log("Computer choice: " + computerChoice);
-    console.log("Player choice: " + playerChoice);
-    console.log(thisRoundResult);
-    console.log("Player score: " + playerScore + " | Computer score: " + computerScore);
     // }s
     
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("computerScore").innerHTML = computerScore;
+    document.getElementById("playerChoice").innerHTML = playerChoice;
+    document.getElementById("computerChoice").innerHTML = computerChoice;
+    document.getElementById("roundResult").innerHTML = thisRoundResult;
 
     if (playerScore >= 5 || computerScore >= 5) {
-        alert(gameResult());
+        window.confirm(gameResult());
         window.location.reload();  
        }
 }
