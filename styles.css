@@ -1,0 +1,29 @@
+
+.game-container {
+    margin: auto;
+    width: 40vw;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 0;
+    
+}
+
+#playerScore, #computerScore {
+    text-align: center;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
