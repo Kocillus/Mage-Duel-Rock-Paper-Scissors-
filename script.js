@@ -84,11 +84,21 @@ function playRound() {
     document.getElementById("computerChoice").innerHTML = computerChoice;
     document.getElementById("roundResult").innerHTML = thisRoundResult;
 
+
+    
+
     if (playerScore >= 5 || computerScore >= 5) {
-        window.confirm(gameResult());
-        window.location.reload();  
+        document.getElementById("gameResultWindow").style.display = "block";
+        document.getElementById("game-container").style.display = "none";
+        document.getElementById("gameResult").innerText = gameResult();
        }
-}
+    
+
+    const gameRestartButton = document.getElementById("gameRestartButton");
+    gameRestartButton.addEventListener("click", () => {
+        window.location.reload();
+    });
+}   
 
 function gameResult() {
     if (playerScore === 5) {
