@@ -3,9 +3,42 @@
     <head>
         <meta carset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <script src="./script.js" charset="uft-8">
         </script>
+        <div id="gameResultWindow">
+                <div class="container-column">
+                    <div id="gameResult"></div>
+                    <div id="gameRestartButtonDiv">
+                        <button id="gameRestartButton">RESTART GAME</button>
+                    </div>
+                </div>
+        </div>
+        <div id="game-container">
+            <div class="score-container">
+                <div class="container-column">
+                    <div class="playerScore"><p>PLAYER</p></div>
+                    <div id="playerScore">0</div>
+                </div> 
+                <div class="container-column roundResult">
+                    <h3>PLAYER CHOICE</h3>
+                    <div id="playerChoice"></div>
+                    <h3>COMPUTER CHOICE</h3>
+                    <div id="computerChoice"></div>
+                    <div id="roundResult"></div>
+                </div> 
+                <div class="container-column">
+                    <div class="computerScore"><p>COMPUTER</p></div>
+                    <div id="computerScore">0</div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+        </div>
     </body>
 </html>
