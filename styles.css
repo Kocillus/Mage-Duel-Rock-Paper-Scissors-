@@ -9,6 +9,7 @@ body {
     margin: auto;
     padding: 0;
     background-color: rgb(162, 218, 255);
+    position: relative;
 }
 
 #game-container {
@@ -34,10 +35,16 @@ body {
     text-align: center;
 }
 
+.playerScore p, .computerScore p {
+    margin-top: 0;
+}
+
 .container-column {
     display: flex;
     flex-direction: column;
     height: 100%;
+    text-align: center;
+    width: 100%;
 }
 
 .button-container {
@@ -77,11 +84,16 @@ h3 {
 }
 
 #gameResultWindow {
-    width: 25vw;
-    height: 16vh;
-    margin: 25vh auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 26vw;
+    height: 18vh;
+    margin: auto auto;
     border: solid 2px black;
-    background-color: antiquewhite;
+    background-color: rgba(250,235,215,0.6);
     display: none;
     text-align: center;
 
@@ -105,3 +117,10 @@ h3 {
     height: 100%;
 }
 
+#playerLives, #computerLives {
+    margin: 10px auto 0 auto;
+}
+
+.heart {
+    width: 15px;
+}

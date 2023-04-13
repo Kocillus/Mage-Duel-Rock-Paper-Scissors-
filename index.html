@@ -19,22 +19,37 @@
         <div id="game-container">
             <div class="score-container">
                 <div class="container-column">
+                    <div id="playerLives">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                    </div>
                     <div class="playerScore"><p>PLAYER</p></div>
                     <div id="playerScore">0</div>
                 </div> 
                 <div class="container-column roundResult">
                     <h3>PLAYER CHOICE</h3>
                     <div id="playerChoice"></div>
+                    
                     <h3>COMPUTER CHOICE</h3>
                     <div id="computerChoice"></div>
                     <div id="roundResult"></div>
                 </div> 
                 <div class="container-column">
+                    <div id="computerLives">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                        <img class="heart" src="./img/heart.png">
+                    </div>
                     <div class="computerScore"><p>COMPUTER</p></div>
                     <div id="computerScore">0</div>
                 </div>
             </div>
-            <div class="button-container">
+            <div class="button-container" id="button-container">
                 <button id="rock">Rock</button>
                 <button id="paper">Paper</button>
                 <button id="scissors">Scissors</button>
