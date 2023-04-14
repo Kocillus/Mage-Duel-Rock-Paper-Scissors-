@@ -12,12 +12,19 @@ function setPlayerChoice(choice) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const rock = document.getElementById("rock");
-    rock.addEventListener("click", () => {
-        setPlayerChoice("ROCK")
+        const startNewGame = document.getElementById("newGameButton");
+        startNewGame.addEventListener("click", () => {
+            document.getElementById("newGameWindow").style.display = "none";
+            document.getElementById("game-container").style.display = "block";
+    })})
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fire = document.getElementById("fire");
+    fire.addEventListener("click", () => {
+        setPlayerChoice("FIRE")
     });
-    paper.addEventListener("click", () => setPlayerChoice('PAPER'));
-    scissors.addEventListener("click", () => setPlayerChoice('SCISSORS'));
+    water.addEventListener("click", () => setPlayerChoice('WATER'));
+    earth.addEventListener("click", () => setPlayerChoice('EARTH'));
 })
 
 function getComputerChoice() {
@@ -25,13 +32,13 @@ function getComputerChoice() {
     let choice = "";
     switch (randomNumber) {
         case 1:
-            choice = 'ROCK';
+            choice = 'FIRE';
             break;
         case 2:
-            choice = 'PAPER';
+            choice = 'WATER';
             break;
         case 3:
-            choice = 'SCISSORS';
+            choice = 'EARTH';
             break;
     }
 
@@ -40,41 +47,41 @@ function getComputerChoice() {
 
 function getRoundResult(playerChoice, computerChoice) {
     if (computerChoice === playerChoice) {
-        return 'its a draw!'
+        return 'Your spells neutralize each other!'
     }
-    if (computerChoice === 'ROCK' && playerChoice === "PAPER") {
+    if (computerChoice === 'FIRE' && playerChoice === "WATER") {
         playerScore++;
         computerLives--;
-        return 'you win!';
+        return 'Success! Evil Wizard get damage!';
 
     }
-    if (computerChoice === 'ROCK' && playerChoice === "SCISSORS") {
+    if (computerChoice === 'FIRE' && playerChoice === "EARTH") {
         computerScore++;
         playerLives--;
-        return 'you lost!'
+        return 'Watch out! You get damage!'
     }
-    if (computerChoice === 'PAPER' && playerChoice === "SCISSORS") {
+    if (computerChoice === 'WATER' && playerChoice === "EARTH") {
         playerScore++;
         computerLives--;
-        return 'you win!';
+        return 'Success! Evil Wizard get damage!';
     }
-    if (computerChoice === 'PAPER' && playerChoice === "ROCK") {
+    if (computerChoice === 'WATER' && playerChoice === "FIRE") {
         computerScore++;
         playerLives--;
-        return 'you lose!'
+        return 'Watch out! You get damage!'
     }
-    if (computerChoice === 'SCISSORS' && playerChoice === "ROCK") {
+    if (computerChoice === 'EARTH' && playerChoice === "FIRE") {
         playerScore++;
         computerLives--;
-        return 'you win!';
+        return 'Success! Evil Wizard get damage!';
     }
-    if (computerChoice === 'SCISSORS' && playerChoice === "PAPER") {
+    if (computerChoice === 'EARTH' && playerChoice === "WATER") {
         computerScore++;
         playerLives--;
-        return 'you lose!'
+        return 'Watch out! You get damage!'
     }
     else {
-        return 'Please, type: ROCK, PAPER or SCISSORS';
+        return 'Please, type: FIRE, WATER or EARTH';
     }
 };
 
@@ -84,8 +91,6 @@ function playRound() {
     let computerChoice = getComputerChoice();
     let thisRoundResult = getRoundResult(playerChoice, computerChoice);
     
-    document.getElementById("playerScore").innerHTML = playerScore;
-    document.getElementById("computerScore").innerHTML = computerScore;
     document.getElementById("playerChoice").innerHTML = playerChoice;
     document.getElementById("computerChoice").innerHTML = computerChoice;
     document.getElementById("roundResult").innerHTML = thisRoundResult;
@@ -151,11 +156,14 @@ function playRound() {
 
 function gameResult() {
     if (playerScore === 5) {
-        
-        return 'You won this game';
+        document.getElementById("computerPortrait").style.transform = "translateY(150px) rotate(90deg)"
+        document.getElementById("computerPortrait").style.transition = "4s"
+        return 'You saved the kingdom!';
     }
     if (computerScore === 5) {
-        return 'Computer won this game';
+        document.getElementById("playerPortrait").style.transform = "translateY(150px) rotate(-90deg) "
+        document.getElementById("playerPortrait").style.transition = "4s"
+        return 'You failed. Evil Wizard has destroyed the kingdom.';
 
     }
 

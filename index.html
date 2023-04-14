@@ -8,30 +8,38 @@
     <body>
         <script src="./script.js" charset="uft-8">
         </script>
+        <div id="newGameWindow">
+            <div class="container-newgame">
+                <div id="title"><h1>Mage Duel</h1></div>
+                <div id="about"><p>There shoud be description of the game and instruction but it isn't ready yet. :(</p></div>
+                <div id="new-game"><button id="newGameButton">New Game</button></div>
+            </div>
+        </div>
         <div id="gameResultWindow">
                 <div class="container-column">
                     <div id="gameResult"></div>
                     <div id="gameRestartButtonDiv">
-                        <button id="gameRestartButton">RESTART GAME</button>
+                        <img src="./img/refresh.png" id="gameRestartButton" class="rotate-animation">
                     </div>
                 </div>
         </div>
         <div id="game-container">
             <div class="score-container">
                 <div class="container-column">
+                    
+                    <div class="playerScore"><p>You</p></div>
+                    <div class="portrait"><img src="./img/playerPortrait.png" id="playerPortrait"></div>
                     <div id="playerLives">
                         <img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png">
                     </div>
-                    <div class="playerScore"><p>PLAYER</p></div>
-                    <div id="playerScore">0</div>
                 </div> 
                     <div class="container-column roundResult">
                         <div class="round-result-sub-container">
-                            <h3>PLAYER CHOICE</h3>
+                            <h3>YOU CHOOSE ELEMENT OF</h3>
                         <div id="playerChoice"></div>
                     </div>
                     <div class="round-result-sub-container">
-                        <h3>COMPUTER CHOICE</h3>
+                        <h3>ENEMY CHOOSE ELEMENT OF</h3>
                         <div id="computerChoice"></div>
                         
                     </div>
@@ -40,16 +48,17 @@
                     </div>
                 </div> 
                 <div class="container-column">
+                    
+                    <div class="computerScore"><p>Evil Wizard</p></div>
+                    <div class="portrait"><img src="./img/computerPortrait.png" id="computerPortrait"></div>
                     <div id="computerLives"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png"><img class="heart" src="./img/heart.png">
                     </div>
-                    <div class="computerScore"><p>COMPUTER</p></div>
-                    <div id="computerScore">0</div>
                 </div>
             </div>
             <div class="button-container" id="button-container">
-                <button id="rock">Rock</button>
-                <button id="paper">Paper</button>
-                <button id="scissors">Scissors</button>
+                <button id="fire"><img src="/img/fire.png"></button>
+                <button id="water"><img src="/img/water.png"></button>
+                <button id="earth"><img src="/img/leaf.png"></button>
             </div>
         </div>
     </body>
