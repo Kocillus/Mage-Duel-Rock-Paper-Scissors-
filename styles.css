@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+    button {
+    color: rgb(32, 32, 32);
+}
+
 body {
     overflow: hidden;
     width: 100%;
@@ -14,6 +18,7 @@ body {
     background-attachment: fixed;
     position: relative;
     font-family: 'Book Antiqua';
+    color: rgb(32, 32, 32);
 }
 
 #newGameWindow {
@@ -42,18 +47,15 @@ body {
     height: auto;
     padding: 5px;
     border-radius: 20px;
-    background-color: rgb(240, 240, 240);
+    background: linear-gradient(0deg, rgba(97, 97, 97, 0.5) 30%, rgba(255, 255, 255, 0.3) 100%);
     margin: 10% 0;
-
+    border: double 10px rgb(32, 32, 32);
+    font-size: 1.9rem;
     }
     
 #newGameButton:hover {
-        transform: scale(1.2);
-        
+        transform: scale(1.1);
 }
-
-
-
 
 #game-container {
     margin: 5% auto 0 auto ;
@@ -84,7 +86,7 @@ body {
 
 .playerScore p, .computerScore p {
     margin: 5% auto 1% auto;
-    border: double 10px rgb(105, 56, 0);
+    border: double 10px rgb(81, 83, 83);
     width: 50%;
     text-align: center;
     font-weight: 700;
@@ -122,7 +124,7 @@ body {
 
 .button-container button:hover {
     transform: scale(1.2);
-    background-color: rgb(240, 240, 240);
+    background-color: rgba(220, 220, 220, 0.7);
 }
 
 .roundResult {
