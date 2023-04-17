@@ -31,6 +31,14 @@ body {
     text-align: center;
 }
 
+.new-game-about {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1vw;
+    align-content: space-between;
+    height: 100%;
+}
+
 .container-newgame {
     display: flex;
     flex-direction: column;
@@ -38,8 +46,30 @@ body {
     height: 100%;
 }
 
-#about {
+#about, #rules {
     height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.fire, .earth, .water {
+    font-weight: 900;
+}
+
+.fire {
+    color: rgb(228, 0, 0);
+}
+
+.earth {
+    color: rgb(102, 83, 0);
+}
+
+.water {
+    color: rgb(0, 96, 185)
 }
 
 #newGameButton {
@@ -48,7 +78,7 @@ body {
     padding: 5px;
     border-radius: 20px;
     background: linear-gradient(0deg, rgba(97, 97, 97, 0.5) 30%, rgba(255, 255, 255, 0.3) 100%);
-    margin: 10% 0;
+    margin: 5px auto;
     border: double 10px rgb(32, 32, 32);
     font-size: 1.9rem;
     }
@@ -144,7 +174,7 @@ body {
 h3 {
     padding: 0;
     margin: 10% 0 0 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
