@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const startNewGame = document.getElementById("newGameButton");
         startNewGame.addEventListener("click", () => {
             document.getElementById("newGameWindow").style.display = "none";
-            document.getElementById("game-container").style.display = "block";
+            document.getElementById("gameContainer").style.display = "block";
     })})
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -144,7 +144,7 @@ function playRound() {
 
     if (playerScore >= 5 || computerScore >= 5) {
         document.getElementById("gameResultWindow").style.display = "block";
-        document.getElementById("button-container").style.display = "none";
+        document.getElementById("buttonContainer").style.display = "none";
         document.getElementById("gameResult").innerText = gameResult();
        };
     

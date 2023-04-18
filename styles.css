@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-.new-game-about {
+.newGameAbout {
     display: flex;
     flex-direction: row;
     margin: 0 1vw;
@@ -39,7 +39,7 @@ body {
     height: 100%;
 }
 
-.container-newgame {
+.containerNewgame {
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -69,7 +69,7 @@ body {
 }
 
 .water {
-    color: rgb(0, 96, 185)
+    color: rgb(0, 53, 102)
 }
 
 #newGameButton {
@@ -87,7 +87,7 @@ body {
         transform: scale(1.1);
 }
 
-#game-container {
+#gameContainer {
     margin: 5% auto 0 auto ;
     width: 70%;
     height: 65%;
@@ -97,7 +97,7 @@ body {
     display: none;
 }
 
-.score-container {
+.scoreContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -123,7 +123,7 @@ body {
     font-size: 1.5rem;
 }
 
-.container-column {
+.containerColumn {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -131,7 +131,7 @@ body {
     width: 100%;
 }
 
-.button-container {
+.buttonContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -139,12 +139,12 @@ body {
     width: 30%;
 }
 
-.button-container img {
+.buttonContainer img {
     width: 3vw;
     height: 3vw;
 }
 
-.button-container button {
+.buttonContainer button {
     width: 4vw;
     height: 4vw;
     border-radius: 25%;
@@ -152,7 +152,7 @@ body {
     ;
 }
 
-.button-container button:hover {
+.buttonContainer button:hover {
     transform: scale(1.2);
     background-color: rgba(220, 220, 220, 0.7);
 }
@@ -164,7 +164,7 @@ body {
     padding: 0;
 }
 
-.round-result-sub-container {
+.roundResultSubContainer {
     font-size: 1.5rem;
     font-weight: 500;
     height: 100%;
